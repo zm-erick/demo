@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			//Object.defineProperty()
+			var obj = {};
+			var newLine = "<br />";
+			Object.defineProperties(obj, {
+				newDataProperty: {
+					value: 101,
+					writable: true,
+					enumerable: true,
+					configurable: true
+				},
+				newAccessorProperty: {
+					set: function(x) {
+						var val = x *2;
+						document.write("in property set accessor" + val + newLine);
+						this.newaccpropvalue = val;
+					},
+					get: function() {
+						//document.write("in property get accessor" + newLine);
+						return this.newaccpropvalue;
+					},
+					enumerable: true,
+					configurable: true
+				}
+			});
+//			console.log(obj);
+//			console.log(obj.newDataProperty);
+			console.log(obj.newAccessorProperty);
+			obj.newAccessorProperty = 20;
+			console.log(obj.newAccessorProperty);
+			setTimeout(function(){
+				obj.newAccessorProperty = 100;
+				console.log(obj.newAccessorProperty);
+			},3000)
+			//console.log(obj.newDataProperty);
+		</script>
+	</body>
+
+</html>

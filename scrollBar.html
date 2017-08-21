@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			ul,
+			li {
+				list-style-type: none;
+			}
+			
+			#div1 {
+				width: 100%;
+				/*overflow: hidden;*/
+			}
+			
+			#div2 {}
+			
+			#div3 {}
+			
+			#div4 {
+				/*padding:0 10px;*/
+				width: 300px;
+				height: 300px;
+				padding: 10px 15px;
+				/*overflow-y:scroll;*/
+				/*-webkit-overflow-scrolling:touch;*/
+			}
+			
+			#listBox {
+				width: 200px;
+				height: 300px;
+				padding: 10px 15px;
+				overflow-y: auto;
+				background-color: lightcyan;
+				/*-webkit-overflow-scrolling: auto;*/
+			}
+			
+			#listBox li {
+				height: 300px;
+				/*-webkit-overflow-scrolling: touch;*/
+			}
+			
+			.rows {
+				height: 230px;
+				overflow: hidden;
+				overflow-y: auto;
+			}
+			
+			.rows::-webkit-scrollbar-track-piece {
+				background-color: rgba(0, 0, 0, 0);
+				border-left: 1px solid rgba(0, 0, 0, 0);
+			}
+			
+			.rows::-webkit-scrollbar {
+				width: 5px;
+				height: 13px;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+			}
+			
+			.rows::-webkit-scrollbar-thumb {
+				background-color: rgba(0, 0, 0, 0.5);
+				background-clip: padding-box;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+				min-height: 28px;
+			}
+			
+			.rows::-webkit-scrollbar-thumb:hover {
+				background-color: rgba(0, 0, 0, 0.5);
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="div1">
+			<div id="div2">div2</div>
+			<div id="div3">div3</div>
+			<div id="div4">
+				<ul id="listBox" class="rows">
+					<li>list1</li>
+					<li>list2</li>
+					<li>list3</li>
+					<li>list4</li>
+					<li>list5</li>
+					<li>list6</li>
+					<li>list7</li>
+					<li>list8</li>
+					
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>
